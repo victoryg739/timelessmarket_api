@@ -1,6 +1,8 @@
 from flask import Flask
 from scrap import scrapData
+from flask_cors import CORS
 app = Flask(__name__)
+CORS(app)
 
 #Later change to production deployment
 

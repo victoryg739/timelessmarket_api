@@ -2,9 +2,24 @@ from urllib.request import urlopen
 from bs4 import BeautifulSoup as soup
 import json
 import urllib.request
+import requests
 
 def scrapData(ticker):
-    my_url = 'http://financials.morningstar.com/finan/financials/getFinancePart.html?&callback=jsonp1601568971821&t=XNAS:'+ticker+'&region=usa&culture=en-US&cur=&order=asc&_=1601568972042'
+    yahoo_url = "https://finance.yahoo.com/quote/"+ticker
+    page = requests.get(yahoo_url)
+    yahoosoup = soup(page.text, 'html.parser')
+
+    exchangeData = yahoosoup.find("span", {"data-reactid": "9"}).text
+    exchange = exchangeData.split(" -", 1)
+    exchangeLink = ""
+    if(exchange[0] == "NYSE"):
+        exchangeLink = "XNYS"
+    elif (exchange[0] == "NasdaqGS"):
+        exchangeLink = "XNAS"
+
+
+
+    my_url = 'http://financials.morningstar.com/finan/financials/getFinancePart.html?&callback=jsonp1601568971821&t='+ exchangeLink + ':'+ticker+'&region=usa&culture=en-US&cur=&order=asc&_=1601568972042'
 
     text = urllib.request.urlopen(my_url).read().decode()
 
@@ -14,7 +29,6 @@ def scrapData(ticker):
     apijson = apijson.replace("\\","")
     
     CombineList = []
-
 
 
     sp = soup(apijson,"lxml")
@@ -121,3 +135,4 @@ def scrapData(ticker):
     CombineList = json.dumps(CombineList,ensure_ascii=False)
 
     return(CombineList)
+

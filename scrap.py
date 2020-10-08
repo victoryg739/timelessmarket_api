@@ -40,7 +40,7 @@ def scrapData(ticker):
     CombineList.append(date)
 
     htmlRevenue = sp.findAll("td",{'headers':'i0'})
-    revenue = []
+    revenue = ["Revenue"]
     for a in htmlRevenue:
         revenue.append(a.text)
     CombineList.append(revenue)

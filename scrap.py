@@ -47,7 +47,7 @@ def scrapData(ticker):
 
 
     htmlGrossMargin = sp.findAll("td",{'headers':'i1'})
-    grossmargin = ["Gross Margin"]
+    grossmargin = ["Gross Margin (%)"]
     for a in htmlGrossMargin:
         grossmargin.append(a.text)
     CombineList.append(grossmargin)
@@ -59,7 +59,7 @@ def scrapData(ticker):
     CombineList.append(operatingincome)
 
     htmlOperatingMargin = sp.findAll("td",{'headers':'i3'})
-    operatingmargin = ["Operating Margin"]
+    operatingmargin = ["Operating Margin (%)"]
     for a in htmlOperatingMargin:
         operatingmargin.append(a.text)
     CombineList.append(operatingmargin)
@@ -71,7 +71,7 @@ def scrapData(ticker):
     CombineList.append(netIncome)
 
     htmlEPS = sp.findAll("td",{'headers':'i5'})
-    eps = ["Earnings per share"]
+    eps = ["Earnings Per Share"]
     for a in htmlEPS:
         eps.append(a.text)
     CombineList.append(eps)
@@ -83,50 +83,50 @@ def scrapData(ticker):
     CombineList.append(dividends)
 
     htmlpayoutratio = sp.findAll("td",{'headers':'i91'})
-    payoutratio  = ["Payout ratio"]
+    payoutratio  = ["Payout Ratio (%)"]
     for a in htmlpayoutratio:
         payoutratio.append(a.text)
     CombineList.append(payoutratio)
 
     htmlshares = sp.findAll("td",{'headers':'i7'})
-    shares = ["No of shares"]
+    shares = ["No of Shares"]
     for a in htmlshares:
         shares.append(a.text)
     CombineList.append(shares)
 
     htmlbookvalue = sp.findAll("td",{'headers':'i8'})
-    bookvalue = ["Book Value"]
+    bookvalue = ["Book Value/Share"]
     for a in htmlbookvalue:
         bookvalue.append(a.text)
     CombineList.append(bookvalue)
 
     htmlOperatingCashFlow = sp.findAll("td",{'headers':'i9'})
-    OperatingCashFlow = ["Operating cash flow"]
+    OperatingCashFlow = ["Operating Cash Flow"]
     for a in htmlOperatingCashFlow:
         OperatingCashFlow.append(a.text)
     CombineList.append(OperatingCashFlow)
 
     htmlCapSpending = sp.findAll("td",{'headers':'i10'})
-    CapSpending = ["cap spending"]
+    CapSpending = ["Cap Spending"]
     for a in htmlCapSpending:
         CapSpending.append(a.text)
     CombineList.append(CapSpending)
 
 
     htmlfcf = sp.findAll("td",{'headers':'i11'})
-    fcf = ["Free cash flow"]
+    fcf = ["Free Cash Flow"]
     for a in htmlfcf:
         fcf.append(a.text)
     CombineList.append(fcf)
 
     htmlfcfPerShare = sp.findAll("td",{'headers':'i90'})
-    fcfPerShare = ["Free cash flow/share"]
+    fcfPerShare = ["Free Cash Flow/Share"]
     for a in htmlfcfPerShare:
         fcfPerShare.append(a.text)
     CombineList.append(fcfPerShare)
 
     htmlWorkingCapital = sp.findAll("td",{'headers':'i80'})
-    WorkingCapital = ["Working capital"]
+    WorkingCapital = ["Working Capital"]
     for a in htmlWorkingCapital:
         WorkingCapital.append(a.text)
 

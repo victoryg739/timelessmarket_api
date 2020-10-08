@@ -1,5 +1,6 @@
 from flask import Flask
 from scrap import scrapData
+from yahoofin import get_info
 from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
@@ -14,6 +15,9 @@ def hello_world():
 def search_query(query):
     return scrapData(query)
 
+@app.route("/yahoofin/<query>")
+def search_yahoof(query):
+    return get_info(query)
 
 
 if __name__ == '__main__':

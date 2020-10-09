@@ -9,8 +9,8 @@ def scrap_yahoofin(ticker):
     soup = bsoup(page.text, 'html.parser')
 
     rootappmain = soup.find("script", text=re.compile("root.App.main"))
-    data = '"compiledData":{'+str(rootappmain)[str(rootappmain).find('"summaryProfile'):str(rootappmain).find(',"pageViews')] + "}"
-
+    data = str(rootappmain)[str(rootappmain).find('root.App.main'):str(rootappmain).find(';\n}(this));')]
+    data = data.replace("root.App.main = ","")
     return data
 
 

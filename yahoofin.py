@@ -1,12 +1,17 @@
-import yfinance as yf
-import json
+import re
+from bs4 import BeautifulSoup as bsoup
+import requests
 
-def get_info(ticker):
 
-    stock = yf.Ticker(ticker)
+def scrap_yahoofin(ticker):
+    yahoo_url = "https://finance.yahoo.com/quote/" + ticker
+    page = requests.get(yahoo_url)
+    soup = bsoup(page.text, 'html.parser')
 
-    # get stock info
-    
-    return json.dumps(stock.info)
+    rootappmain = soup.find("script", text=re.compile("root.App.main"))
+    data = str(rootappmain)[str(rootappmain).find('{"zip"'):str(rootappmain).find(',"recommendationTrend')]
+
+    return data
+
 
 

@@ -9,7 +9,7 @@ def scrap_yahoofin(ticker):
     soup = bsoup(page.text, 'html.parser')
 
     rootappmain = soup.find("script", text=re.compile("root.App.main"))
-    data = str(rootappmain)[str(rootappmain).find('{"zip"'):str(rootappmain).find(',"symbol')] + "}}"
+    data = str(rootappmain)[str(rootappmain).find('{"zip"'):str(rootappmain).find(',"dayHigh')]
 
     return data
 

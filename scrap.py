@@ -81,7 +81,7 @@ def scrapData(ticker):
     CombineList.append(bookvalue)
 
     htmlCurrentRatio = spKeystat.findAll("td", {'headers': 'i65'})
-    currentRatio = ["Net Income"]
+    currentRatio = ["Current Ratio"]
     for a in htmlCurrentRatio:
         currentRatio.append(a.text)
     CombineList.append(currentRatio)

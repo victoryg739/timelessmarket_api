@@ -49,7 +49,7 @@ def scrapData(ticker):
 
     # Income statement
     htmlEPS = spFinance.findAll("td",{'headers':'i5'})
-    eps = ["Earnings per share"]
+    eps = ["Earnings per Share"]
     for a in htmlEPS:
         eps.append(a.text)
     CombineList.append(eps)
@@ -101,19 +101,19 @@ def scrapData(ticker):
 
     #Profitability
     htmlReturnonAsset = spKeystat.findAll("td",{'headers':'i24'})
-    returnonAsset = ["Gross Margin"]
+    returnonAsset = ["Return on Asset"]
     for a in htmlReturnonAsset:
         returnonAsset.append(a.text)
     CombineList.append(returnonAsset)
 
     htmlReturnonEquity = spKeystat.findAll("td",{'headers':'i26'})
-    returnonEquity = ["Gross Margin"]
+    returnonEquity = ["Return on Equity"]
     for a in htmlReturnonEquity:
         returnonEquity.append(a.text)
     CombineList.append(returnonEquity)
 
     htmlReturnonInvestedCapital = spKeystat.findAll("td", {'headers': 'i27'})
-    returnonInvestedCapital = ["Gross Margin"]
+    returnonInvestedCapital = ["Return on Invested Capital"]
     for a in htmlReturnonInvestedCapital:
         returnonInvestedCapital.append(a.text)
     CombineList.append(returnonInvestedCapital)
@@ -146,13 +146,13 @@ def scrapData(ticker):
 
     #Cash Flow
     htmlfcf = spFinance.findAll("td",{'headers':'i11'})
-    fcf = ["Free cash flow"]
+    fcf = ["Free Cash Flow"]
     for a in htmlfcf:
         fcf.append(a.text)
     CombineList.append(fcf)
 
     htmlfcfPerShare = spFinance.findAll("td",{'headers':'i90'})
-    fcfPerShare = ["Free cash flow/share"]
+    fcfPerShare = ["Free Cash Flow per Share"]
     for a in htmlfcfPerShare:
         fcfPerShare.append(a.text)
     CombineList.append(fcfPerShare)
@@ -166,7 +166,7 @@ def scrapData(ticker):
     CombineList.append(dividends)
 
     htmlpayoutratio = spFinance.findAll("td",{'headers':'i91'})
-    payoutratio  = ["Payout ratio"]
+    payoutratio  = ["Payout Ratio"]
     for a in htmlpayoutratio:
         payoutratio.append(a.text)
     CombineList.append(payoutratio)
@@ -175,25 +175,25 @@ def scrapData(ticker):
     #others
 
     htmlshares = spFinance.findAll("td",{'headers':'i7'})
-    shares = ["No of shares"]
+    shares = ["No of Shares"]
     for a in htmlshares:
         shares.append(a.text)
     CombineList.append(shares)
 
     htmlOperatingCashFlow = spFinance.findAll("td",{'headers':'i9'})
-    OperatingCashFlow = ["Operating cash flow"]
+    OperatingCashFlow = ["Operating Cash Flow"]
     for a in htmlOperatingCashFlow:
         OperatingCashFlow.append(a.text)
     CombineList.append(OperatingCashFlow)
 
     htmlCapSpending = spFinance.findAll("td",{'headers':'i10'})
-    CapSpending = ["cap spending"]
+    CapSpending = ["Cap Spending"]
     for a in htmlCapSpending:
         CapSpending.append(a.text)
     CombineList.append(CapSpending)
 
     htmlWorkingCapital = spFinance.findAll("td",{'headers':'i80'})
-    WorkingCapital = ["Working capital"]
+    WorkingCapital = ["Working Capital"]
     for a in htmlWorkingCapital:
         WorkingCapital.append(a.text)
 

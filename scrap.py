@@ -28,7 +28,8 @@ def scrapData(ticker):
     spFinance = soup(apijsonFinance,"lxml")
 
     #KeyStat api part
-    my_url_keystat = 'http://financials.morningstar.com/finan/financials/getFinancePart.html?&callback=jsonp1601568971821&t=' + exchangeLink + ':' + ticker + '&region=usa&culture=en-US&cur=&order=asc&_=1601568972042'
+    my_url_keystat = 'http://financials.morningstar.com/finan/financials/getKeyStatPart.html?&callback=jsonp1602671629303&t=' + exchangeLink + ':' + ticker + '&region=usa&culture=en-US&cur=&order=asc&_=1601568972042'
+
     textKeystat = urllib.request.urlopen(my_url_keystat).read().decode()
     apijsonKeystat = textKeystat[textKeystat.index("(") + 1: textKeystat.rindex(")")]
     apijsonKeystat = apijsonKeystat.replace("\\", "")

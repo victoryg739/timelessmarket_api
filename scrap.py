@@ -75,7 +75,7 @@ def scrapData(ticker):
 
     #Balance Sheet
     htmlbookvalue = spFinance.findAll("td",{'headers':'i8'})
-    bookvalue = ["Book Value"]
+    bookvalue = ["Book Value/Share"]
     for a in htmlbookvalue:
         bookvalue.append(a.text)
     CombineList.append(bookvalue)

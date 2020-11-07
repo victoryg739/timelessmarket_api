@@ -16,7 +16,7 @@ def getFileFtp():
 
 def ticker():
     # Check if file exist
-    getFileFtp()
+
 
 
     pd.set_option('display.width', 2000)

@@ -16,8 +16,7 @@ def getFileFtp():
 
 def ticker():
     # Check if file exist
-    if(os.path.exists("nasdaqtraded.txt") == False):
-        getFileFtp()
+    getFileFtp()
 
 
     pd.set_option('display.width', 2000)

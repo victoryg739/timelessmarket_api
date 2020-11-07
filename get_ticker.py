@@ -16,7 +16,8 @@ def getFileFtp():
 
 def ticker():
     # Check if file exist
-
+    if(os.path.exists("nasdaqtraded.txt") == False):
+        getFileFtp()
 
 
     pd.set_option('display.width', 2000)
@@ -26,15 +27,14 @@ def ticker():
 
     last_row = data.tail(1)
     fileCreationTime = last_row.iloc[0,0]
-    print(fileCreationTime)
     fileCreationTime = fileCreationTime.replace("File Creation Time: ","")
     fileCreationTime = datetime.strptime(fileCreationTime,"%m%d%Y%H:%M")
     fileCreationTime_date = fileCreationTime.date()
     today = str(datetime.today().strftime("%Y-%m-%d"))
 
 
-    # if(today != fileCreationTime_date):
-    #     getFileFtp()
+    if(today != fileCreationTime_date):
+        getFileFtp()
 
 
     data = data[data["Symbol"].notna()]
@@ -56,9 +56,3 @@ def ticker():
 
 
     return(data["Security Name"])
-    #data.to_csv('AllStocks.txt', header=True, index=False, sep='\t', mode='a')
-
-    #print(data.ETF.value_counts())
-    #print(data.loc[data['Symbol'] == "WFC"])
-
-    #print(pd.concat([datasmall["ACT Symbol"], data["Symbol"]]).drop_duplicates(keep=False))

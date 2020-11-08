@@ -48,7 +48,10 @@ def ticker():
 
     data = data[['Symbol','Security Name']]
 
+    #Remove space from security name
+    data  = data.rename(columns={"Security Name":"SecurityName"})
+
     data = data.to_json(orient = "records")
 
-
     return(data)
+

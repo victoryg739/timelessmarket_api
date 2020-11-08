@@ -32,10 +32,8 @@ def ticker():
     fileCreationTime_date = fileCreationTime.date()
     today = str(datetime.today().strftime("%Y-%m-%d"))
 
-
     if(today != fileCreationTime_date):
         getFileFtp()
-
 
     data = data[data["Symbol"].notna()]
 
@@ -50,9 +48,7 @@ def ticker():
 
     data = data[['Symbol','Security Name']]
 
-    data.set_index("Symbol",inplace=True)
+    data = data.to_json()
 
-    data = data.to_dict()
+    return(data)
 
-
-    return(data["Security Name"])

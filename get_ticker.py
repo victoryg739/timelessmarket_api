@@ -48,7 +48,7 @@ def ticker():
 
     data = data[['Symbol','Security Name']]
 
-    data = data.to_json()
+    data = data.to_json(orient = "records")
+
 
     return(data)
-

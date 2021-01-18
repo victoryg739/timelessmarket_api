@@ -20,14 +20,13 @@ def tested(ticker):
     chrome_options.add_argument("--no-sandbox")
     driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
 
-    driver.get("https://www.google.com")
 
-    # ticker = "aapl"
-    # driver = webdriver.Chrome(executable_path="chromedriver.exe")
-    # url = "https://money.tmx.com/en/quote/" + ticker + ":US/financials-filings"
-    # driver.get(url)
-    # html = driver.page_source
+
+    ticker = "aapl"
+    url = "https://money.tmx.com/en/quote/" + ticker + ":US/financials-filings"
+    driver.get(url)
     return(driver.page_source)
+   
 
 @app.route('/')
 def hello_world():

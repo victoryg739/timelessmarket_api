@@ -470,7 +470,36 @@ def scarpTmxAnnual(ticker):
             ,**checkJsonKey(AnnualResponse,"CashFlow",currentYearCf,"InterestPaidSupplementalData","Interest Paid, Supplemental")
             ,**checkJsonKey(AnnualResponse,"CashFlow",currentYearCf,"CapitalExpenditure","Capital Expenditure")}
 
-    return json.dumps(AnnualResponse)
+
+
+    firstFormat = {
+        k: [d.get(k) for d in AnnualResponse]
+        for k in set().union(*AnnualResponse)
+    }
+
+    from collections import defaultdict,ChainMap
+    incomeStatement = defaultdict(list)
+
+    for d in firstFormat["IncomeStatement"]:
+        for k, v in d.items():
+            incomeStatement[k].append(v)
+
+    balanceSheet = defaultdict(list)
+
+    for d in firstFormat["BalanceSheet"]:
+        for k, v in d.items():
+            balanceSheet[k].append(v)
+
+    cashFlow = defaultdict(list)
+
+    for d in firstFormat["CashFlow"]:
+        for k, v in d.items():
+            cashFlow[k].append(v)
+
+
+    formattedAnnualResponse = ChainMap(firstFormat["reportDate"],incomeStatement,balanceSheet,cashFlow)
+
+    return json.dumps(formattedAnnualResponse.maps)
 
 
 def scarpTmxSummary(ticker):
@@ -520,7 +549,3 @@ def checkJsonKey(annualResponse,statement,json_data,json_keyname,NewKeyname):
         return{}
 
 
-
-scarpTmxAnnual("bac")
-print(scarpTmxQuarter("bac"))
-print(scarpTmxSummary("bac"))

@@ -540,7 +540,7 @@ def checkJsonKey(annualResponse,statement,json_data,json_keyname,NewKeyname):
         return {NewKeyname:json_data[json_keyname]}
     else:
         for year in annualResponse:
-            for key in year[statement].keys():
+            for key in year[statement]:
                 if key == json_keyname or key == NewKeyname:
                     return {NewKeyname:"-"}
 

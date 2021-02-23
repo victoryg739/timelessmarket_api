@@ -1,6 +1,6 @@
 import requests
 import json
-import math
+from collections import defaultdict, ChainMap
 
 # Get Token
 headers = {
@@ -509,7 +509,6 @@ def scarpTmxAnnual(ticker):
         k: [d.get(k) for d in AnnualResponse]
         for k in set().union(*AnnualResponse)
     }
-    from collections import defaultdict, ChainMap
     incomeStatement = defaultdict(list)
 
     for d in firstFormat["IncomeStatement"]:
@@ -590,6 +589,3 @@ def checkJsonKey(annualResponse, statement, json_data, json_keyname, NewKeyname,
     boolkey = json_keyname in json_data
     if boolkey is False:
         return {}
-
-print(scarpTmxAnnual("aapl"))
-print(scarpTmxQuarter("aapl"))

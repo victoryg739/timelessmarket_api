@@ -320,7 +320,7 @@ def scarpTmxAnnual(ticker):
         AnnualResponse[count]["IncomeStatement"] = {}
         AnnualResponse[count]["IncomeStatement"] = {
         **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "TotalRevenue", "Total Revenue",True)
-        , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "CostOfRevenue", "\tCost of Revenue",True)
+        , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "CostOfRevenue", "\u0020 Cost of Revenue",True)
         , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "NetInterestIncome", "Net Interest Income",True)  # financials
         , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "NonInterestIncome", "Non Interest Income",True)  # financials
         , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "CreditLossesProvision", "Credit Losses Provision",True)  # financials
@@ -589,3 +589,4 @@ def checkJsonKey(annualResponse, statement, json_data, json_keyname, NewKeyname,
     boolkey = json_keyname in json_data
     if boolkey is False:
         return {}
+

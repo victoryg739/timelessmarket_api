@@ -320,7 +320,7 @@ def scarpTmxAnnual(ticker):
         AnnualResponse[count]["IncomeStatement"] = {}
         AnnualResponse[count]["IncomeStatement"] = {
         **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "TotalRevenue", "Total Revenue",True)
-        , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "CostOfRevenue", " Cost of Revenue",True)
+        , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "CostOfRevenue", "   Cost of Revenue",True)
         , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "NetInterestIncome", "Net Interest Income",True)  # financials
         , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "NonInterestIncome", "Non Interest Income",True)  # financials
         , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "CreditLossesProvision", "Credit Losses Provision",True)  # financials

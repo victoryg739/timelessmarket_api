@@ -76,7 +76,8 @@ def scarpTmxQuarter(ticker):
         , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterIs, "NonInterestExpense", "Non Interest Expense",True)  # financials
         , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterIs, "GrossProfit", "Gross Profit",True)
         , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterIs, "OperatingExpense", "Operating Expense",True)
-        , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterIs, "OccupancyAndEquipment", "Occupancy and Equipment",True)  # financials
+        , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterIs, "OccupancyAnd"
+                                                                                 "quipment", "Occupancy and Equipment",True)  # financials
         , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterIs, "SellingGeneralAndAdministration", "Selling, General and Administration",True)
         , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterIs, "ResearchAndDevelopment", "Research and Development",True)
         , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterIs, "DepreciationAndAmortization", "Depreciation and Amortization",True)
@@ -320,9 +321,9 @@ def scarpTmxAnnual(ticker):
         AnnualResponse[count]["IncomeStatement"] = {}
         AnnualResponse[count]["IncomeStatement"] = {
         **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "TotalRevenue", "Total Revenue",True)
-        , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "CostOfRevenue", "\xa0\xa0\xa0\xa0\xa0\xa0Cost of Revenue",True)
-        , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "NetInterestIncome", "Net Interest Income",True)  # financials
-        , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "NonInterestIncome", "Non Interest Income",True)  # financials
+        , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "CostOfRevenue", "\xa0\xa0\xa0\xa0\xa0 Cost of Revenue",True)
+        # , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "NetInterestIncome", "Net Interest Income",True)  # financials
+        # , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "NonInterestIncome", "Non Interest Income",True)  # financials
         , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "CreditLossesProvision", "Credit Losses Provision",True)  # financials
         , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "NonInterestExpense", "Non Interest Expense",True)  # financials
         , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "GrossProfit", "Gross Profit",True)
@@ -589,4 +590,4 @@ def checkJsonKey(annualResponse, statement, json_data, json_keyname, NewKeyname,
     boolkey = json_keyname in json_data
     if boolkey is False:
         return {}
-
+print(scarpTmxAnnual("AAPL"))

@@ -326,18 +326,18 @@ def scarpTmxAnnual(ticker):
         # , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "NonInterestIncome", "Non Interest Income",True)  # financials
         , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "CreditLossesProvision", "Credit Losses Provision",True)  # financials
         , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "NonInterestExpense", "Non Interest Expense",True)  # financials
-        , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "GrossProfit", "Gross Profit",True)
+        , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "GrossProfit", "\xa0\xa0\xa0\xa0\xa0 Gross Profit",True)
         , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "OperatingExpense", "Operating Expense",True)
         , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "OccupancyAndEquipment", "Occupancy and Equipment",True)  # financials
-        , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "SellingGeneralAndAdministration", "Selling, General and Administration",True)
-        , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "ResearchAndDevelopment", "Research and Development",True)
-        , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "DepreciationAndAmortization", "Depreciation and Amortization",True)
+        , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "SellingGeneralAndAdministration", "\xa0\xa0\xa0\xa0\xa0 Selling, General and Administration",True)
+        , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "ResearchAndDevelopment", "\xa0\xa0\xa0\xa0\xa0 Research and Development",True)
+        , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "DepreciationAndAmortization", "Depreciation and Amortization",True) #financials
         , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "Depletion", "Depletion",True)  # financials
         , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "SecuritiesAmortization", "Securities Amortization",True)  # financials
         , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "OtherNonInterestExpense", "Other Non Interest Expense",True)  # financials
         , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "IncomefromAssociatesandOtherParticipatingInterests", "Income from Associates and Other Participating Interests",True)#financials
         , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "OperatingIncome", "Operating Income",True)
-        , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "NetNonOperatingInterestIncomeExpense", "Net Interest",True)
+        , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "NetNonOperatingInterestIncomeExpense", "Net Interest Expense",True)
         , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "OtherIncomeExpense", "Other Income Expense",True)
         , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "PretaxIncome", "Income before Tax",True)
         , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "TaxProvision", "Provision for Income Tax",True)
@@ -348,7 +348,7 @@ def scarpTmxAnnual(ticker):
         , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "BasicAverageShares", "Basic Average Shares Outstanding",True)
         , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "DilutedAverageShares", "Diluted Average Shares Outstanding",True)
         , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "DividendPerShare", "Dividend Per Share",False)
-        , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "EBIT", "EBIT",True)
+       # , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "EBIT", "EBIT",True)
         , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "EBITDA", "EBITDA",True)}
 
         currentYearBs = year["BalanceSheet"]

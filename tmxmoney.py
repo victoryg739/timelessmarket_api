@@ -336,11 +336,11 @@ def scarpTmxAnnual(ticker):
         , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "SecuritiesAmortization", "Securities Amortization",True)  # financials
         , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "OtherNonInterestExpense", "Other Non Interest Expense",True)  # financials
         , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "IncomefromAssociatesandOtherParticipatingInterests", "Income from Associates and Other Participating Interests",True)#financials
-        , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "OperatingIncome", "Operating Income",True)
-        , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "NetNonOperatingInterestIncomeExpense", "Net Interest Expense",True)
-        , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "OtherIncomeExpense", "Other Income Expense",True)
-        , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "PretaxIncome", "Income before Tax",True)
-        , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "TaxProvision", "Provision for Income Tax",True)
+        , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "OperatingIncome", "Operating Income/EBIT",True)
+        , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "NetNonOperatingInterestIncomeExpense", "\xa0\xa0\xa0\xa0\xa0 Net Interest Expense",True)
+        , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "OtherIncomeExpense", "\xa0\xa0\xa0\xa0\xa0 Other Income Expense",True)
+        , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "PretaxIncome", "Income before Tax/EBT",True)
+        , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "TaxProvision", "\xa0\xa0\xa0\xa0\xa0 Provision for Income Tax",True)
         , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "NetIncome", "Net Income",True)
         , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "NetIncomeCommonStockholders", "Net Income Common Shareholders",True)
         , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "BasicEPS", "Basic EPS",False)

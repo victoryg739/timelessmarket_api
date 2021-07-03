@@ -343,7 +343,7 @@ def scarpTmxAnnual(ticker):
         , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "TaxProvision", "\xa0\xa0\xa0\xa0\xa0 Provision for Income Tax",True)
         , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "NetIncome", "Net Income",True)
         , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "NetIncomeCommonStockholders", "Net Income Common Shareholders",True)
-        , **{"Per Share":""}
+        , **{"Per Share Items":""}
         , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "BasicEPS", "Basic EPS",False)
         , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "DilutedEPS", "Diluted EPS",False)
         , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "BasicAverageShares", "Basic Average Shares Outstanding",True)
@@ -437,9 +437,9 @@ def scarpTmxAnnual(ticker):
         currentYearCf = year["CashFlow"]
         AnnualResponse[count]["CashFlow"] = {}
         AnnualResponse[count]["CashFlow"] = {
-        **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "OperatingCashFlow", "Operating Cash Flow",True)
-        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "CashFlowFromContinuingOperatingActivities", "Cash from Continuing Operating Activities",True)
-        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "NetIncomeFromContinuingOperations", "Net Income",True)  # tab
+        #**checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "OperatingCashFlow", "Operating Cash Flow",True)
+        **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "CashFlowFromContinuingOperatingActivities", "Cash from Continuing Operating Activities",True)
+        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "NetIncomeFromContinuingOperations", "\xa0\xa0\xa0 Net Income",True)  # tab
         , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "OperatingGainsLosses", "Operating Gains Losses",True)
         , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "DepreciationAmortizationDepletion", "Depreciation Amortization Depletion",True)
         , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "DeferredTax", "Deferred Tax",True)
@@ -453,13 +453,13 @@ def scarpTmxAnnual(ticker):
         , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "ProvisionForLoanLeaseAndOtherLosses", "Provision for Loan Lease and Other Losses",True)
         , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "OtherNonCashItems", "Other Non Cash Items",True)
         , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "ChangeInWorkingCapital", "Changes in Operating Assets and Liabilities",True)
-        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "ChangeInReceivables", "Receivables",True)  # tab
-        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "ChangeInInventory", "Inventory",True)
-        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "ChangeInPrepaidAssets", "Prepaid Assets",True)
-        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "ChangeInPayablesAndAccruedExpense", "Payables and Accrued Expense",True)
-        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "ChangeInOtherCurrentAssets", "Other Current Assets",True)
-        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "ChangeInOtherCurrentLiabilities", "Other Current Liabilities",True)
-        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "ChangeInOtherWorkingCapital", "Other Working Capital",True)  # untab
+        # , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "ChangeInReceivables", "Receivables",True)  # tab
+        # , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "ChangeInInventory", "Inventory",True)
+        # , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "ChangeInPrepaidAssets", "Prepaid Assets",True)
+        # , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "ChangeInPayablesAndAccruedExpense", "Payables and Accrued Expense",True)
+        # , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "ChangeInOtherCurrentAssets", "Other Current Assets",True)
+        # , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "ChangeInOtherCurrentLiabilities", "Other Current Liabilities",True)
+        # , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "ChangeInOtherWorkingCapital", "Other Working Capital",True)  # untab
         , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "DividendPaidCFO", "DividendPaidCFO",True)
         , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "DividendReceivedCFO", "Dividend Received CFO",True)
         , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "InterestPaidCFO", "Interest Paid CFO",True)

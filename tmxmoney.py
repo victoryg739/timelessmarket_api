@@ -376,7 +376,7 @@ def scarpTmxAnnual(ticker):
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "AccumulatedDepreciation", "\xa0\xa0\xa0\xa0\xa0\xa0  Accumulated Depreciation",True)
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "Goodwill", "\xa0\xa0\xa0 Goodwill",True)
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "OtherIntangibleAssets", "\xa0\xa0\xa0 Intangible Assets",True)
-        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "InvestmentAndAdvances", "\xa0\xa0\xa0 Investment And Advances",True)
+        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "InvestmentsAndAdvances", "\xa0\xa0\xa0 Investments And Advances",True)
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "FinancialAssets", "\xa0\xa0\xa0 Financial Assets",True)
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "NonCurrentAccountsReceivable", "\xa0\xa0\xa0 Non Current Accounts Receivable",True)
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "NonCurrentNoteReceivables", "\xa0\xa0\xa0 Non Current Note Receivable",True)

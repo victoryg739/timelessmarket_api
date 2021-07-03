@@ -326,7 +326,7 @@ def scarpTmxAnnual(ticker):
         # , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "NonInterestIncome", "Non Interest Income",True)  # financials
         , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "CreditLossesProvision", "Credit Losses Provision",True)  # financials
         , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "NonInterestExpense", "Non Interest Expense",True)  # financials
-        , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "GrossProfit", "\xa0\xa0\xa0\xa0\xa0 Gross Profit",True)
+        , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "GrossProfit", "Gross Profit",True)
         , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "OperatingExpense", "Operating Expense",True)
         , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "OccupancyAndEquipment", "Occupancy and Equipment",True)  # financials
         , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "SellingGeneralAndAdministration", "\xa0\xa0\xa0\xa0\xa0 Selling, General and Administration",True)
@@ -343,6 +343,7 @@ def scarpTmxAnnual(ticker):
         , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "TaxProvision", "\xa0\xa0\xa0\xa0\xa0 Provision for Income Tax",True)
         , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "NetIncome", "Net Income",True)
         , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "NetIncomeCommonStockholders", "Net Income Common Shareholders",True)
+        , **{"Per Share":""}
         , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "BasicEPS", "Basic EPS",False)
         , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "DilutedEPS", "Diluted EPS",False)
         , **checkJsonKey(AnnualResponse, "IncomeStatement", currentYearIs, "BasicAverageShares", "Basic Average Shares Outstanding",True)

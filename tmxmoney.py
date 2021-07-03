@@ -68,38 +68,38 @@ def scarpTmxQuarter(ticker):
         currentQuarterIs = quarter["IncomeStatement"]
         QuarterlyResponse[count]["IncomeStatement"] = {}
         QuarterlyResponse[count]["IncomeStatement"] = {
-        **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterIs, "TotalRevenue", "Total Revenue",True)
-        , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterIs, "CostOfRevenue", "Cost of Revenue",True)
-        , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterIs, "NetInterestIncome", "Net Interest Income",True)  # financials
-        , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterIs, "NonInterestIncome", "Non Interest Income",True)  # financials
-        , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterIs, "CreditLossesProvision", "Credit Losses Provision",True)  # financials
-        , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterIs, "NonInterestExpense", "Non Interest Expense",True)  # financials
-        , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterIs, "GrossProfit", "Gross Profit",True)
-        , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterIs, "OperatingExpense", "Operating Expense",True)
-        , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterIs, "OccupancyAnd"
-                                                                                 "quipment", "Occupancy and Equipment",True)  # financials
-        , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterIs, "SellingGeneralAndAdministration", "Selling, General and Administration",True)
-        , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterIs, "ResearchAndDevelopment", "Research and Development",True)
-        , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterIs, "DepreciationAndAmortization", "Depreciation and Amortization",True)
-        , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterIs, "Depletion", "Depletion",True)  # financials
-        , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterIs, "SecuritiesAmortization", "Securities Amortization",True)  # financials
-        , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterIs, "OtherNonInterestExpense", "Other Non Interest Expense",True)  # financials
-        , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterIs, "IncomefromAssociatesandOtherParticipatingInterests", "Income from Associates and Other Participating Interests",True)
-        # financials
-        , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterIs, "OperatingIncome", "Operating Income",True)
-        , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterIs, "NetNonOperatingInterestIncomeExpense", "Net Interest",True)
-        , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterIs, "OtherIncomeExpense", "Other Income Expense",True)
-        , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterIs, "PretaxIncome", "Income before Tax",True)
-        , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterIs, "TaxProvision", "Provision for Income Tax",True)
-        , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterIs, "NetIncome", "Net Income",True)
-        , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterIs, "NetIncomeCommonStockholders", "Net Income Common Shareholders",True)
-        , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterIs, "BasicEPS", "Basic EPS",False)
-        , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterIs, "DilutedEPS", "Diluted EPS",False)
-        , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterIs, "BasicAverageShares", "Basic Average Shares Outstanding",True)
-        , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterIs, "DilutedAverageShares", "Diluted Average Shares Outstanding",True)
-        , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterIs, "DividendPerShare", "Dividend Per Share",False)
-        , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterIs, "EBIT", "EBIT",True)
-        , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterIs, "EBITDA", "EBITDA",True)}
+            **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterBs, "TotalRevenue", "Total Revenue", True)
+            , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterBs, "CostOfRevenue", "\xa0\xa0\xa0\xa0\xa0 Cost of Revenue", True)
+            # , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterBs, "NetInterestIncome", "Net Interest Income",True)  # financials
+            # , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterBs, "NonInterestIncome", "Non Interest Income",True)  # financials
+            , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterBs, "CreditLossesProvision", "Credit Losses Provision", True)  # financials
+            , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterBs, "NonInterestExpense", "Non Interest Expense", True)  # financials
+            , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterBs, "GrossProfit", "Gross Profit", True)
+            , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterBs, "OperatingExpense", "Operating Expense", True)
+            , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterBs, "OccupancyAndEquipment", "Occupancy and Equipment", True)  # financials
+            , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterBs, "SellingGeneralAndAdministration", "\xa0\xa0\xa0\xa0\xa0 Selling, General and Administration", True)
+            , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterBs, "ResearchAndDevelopment", "\xa0\xa0\xa0\xa0\xa0 Research and Development", True)
+            , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterBs, "DepreciationAndAmortization", "Depreciation and Amortization", True)  # financials
+            , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterBs, "Depletion", "Depletion", True)  # financials
+            , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterBs, "SecuritiesAmortization", "Securities Amortization", True)  # financials
+            , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterBs, "OtherNonInterestExpense", "Other Non Interest Expense", True)  # financials
+            , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterBs, "IncomefromAssociatesandOtherParticipatingInterests", "Income from Associates and Other Participating Interests", True)
+            # financials
+            , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterBs, "OperatingIncome", "Operating Income/EBIT", True)
+            , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterBs, "NetNonOperatingInterestIncomeExpense", "\xa0\xa0\xa0\xa0\xa0 Net Interest Expense", True)
+            , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterBs, "OtherIncomeExpense", "\xa0\xa0\xa0\xa0\xa0 Other Income Expense", True)
+            , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterBs, "PretaxIncome", "Income before Tax/EBT", True)
+            , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterBs, "TaxProvision", "\xa0\xa0\xa0\xa0\xa0 Provision for Income Tax", True)
+            , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterBs, "NetIncome", "Net Income", True)
+            , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterBs, "NetIncomeCommonStockholders", "Net Income Common Shareholders", True)
+            , **{"Per Share Items": ""}
+            , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterBs, "BasicEPS", "Basic EPS", False)
+            , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterBs, "DilutedEPS", "Diluted EPS", False)
+            , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterBs, "BasicAverageShares", "Basic Average Shares Outstanding", True)
+            , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterBs, "DilutedAverageShares", "Diluted Average Shares Outstanding", True)
+            , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterBs, "DividendPerShare", "Dividend Per Share", False)
+            # , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterBs, "EBIT", "EBIT",True)
+            , **checkJsonKey(QuarterlyResponse, "IncomeStatement", currentQuarterBs, "EBITDA", "EBITDA", True)}
 
         currentQuarterBs = quarter["BalanceSheet"]
         QuarterlyResponse[count]["BalanceSheet"] = {}
@@ -154,7 +154,7 @@ def scarpTmxQuarter(ticker):
         , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "TotalNonCurrentLiabilities", "Total Non Current Liabilities",True)
         , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "LongTermProvisions", "Long Term Provisions",True)
         , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "LongTermDebtAndCapitalLeaseObligation", "Long Term Debt and Capital Lease Obligation",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "NonCurrentDeferredLiabilities", "NonCurrentDeferredLiabilities",True)
+        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "NonCurrentDeferredLiabilities", "Non Current Deferred Liabilities",True)
         , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "TradeandOtherPayablesNonCurrent", "Trade and Other Payables Non Current",True)
         , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "DuetoRelatedPartiesNonCurrent", "Dueto Related Parties Non Current",True)
         , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "NonCurrentAccruedExpenses", "Non Current Accrued Expenses",True)
@@ -407,7 +407,7 @@ def scarpTmxAnnual(ticker):
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "TotalNonCurrentLiabilities", "Total Non Current Liabilities",True)
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "LongTermProvisions", "\xa0\xa0\xa0 Long Term Provisions",True)
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "LongTermDebtAndCapitalLeaseObligation", "\xa0\xa0\xa0 Long Term Debt and Capital Lease Obligation",True)
-        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "NonCurrentDeferredLiabilities", "\xa0\xa0\xa0 NonCurrentDeferredLiabilities",True)
+        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "NonCurrentDeferredLiabilities", "\xa0\xa0\xa0 Non Current Deferred Liabilities",True)
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "TradeandOtherPayablesNonCurrent", "\xa0\xa0\xa0 Trade and Other Payables Non Current",True)
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "DuetoRelatedPartiesNonCurrent", "\xa0\xa0\xa0 Dueto Related Parties Non Current",True)
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "NonCurrentAccruedExpenses", "\xa0\xa0\xa0 Non Current Accrued Expenses",True)
@@ -427,7 +427,7 @@ def scarpTmxAnnual(ticker):
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "AdditionalPaidInCapital", "Additional Paid in Capital",True)
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "RetainedEarnings", "Retained Earnings",True)
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "TreasuryStock", "Treasury Stock",True)
-        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "GainsLossesNotAffectingRetainedEarnings", "Reserves/Accumulated Comprehensive Income/Losse",True)
+        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "GainsLossesNotAffectingRetainedEarnings", "Reserves/Accumulated Comprehensive Income/Losses",True)
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "OtherEquityInterest", "Other Equity Interest",True)
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "MinorityInterest", "Minority Interest",True)
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "TotalCapitalization", "Total Capitalization",True)

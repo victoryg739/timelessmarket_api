@@ -485,28 +485,29 @@ def scarpTmxAnnual(ticker):
         , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "InterestsReceivedCFI", "\xa0\xa0\xa0 Interests Received CFI",True)
         , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "NetOtherInvestingChanges", "\xa0\xa0\xa0 Net Other Investing Changes",True)
         , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "CashFromDiscontinuedInvestingActivities", "\xa0\xa0\xa0 Cash from Discontinued Investing Activities",True)
+
         , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "FinancingCashFlow", "Financing Cash Flow",True)
-        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "CashFlowFromContinuingFinancingActivities", "Cash from Continuing Financing Activities",True)
+        #, **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "CashFlowFromContinuingFinancingActivities", "Cash from Continuing Financing Activities",True)
         , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "ChangeInFederalFundsAndSecuritiesSoldForRepurchase", "Federal Funds and Securities Sold",True)  # financials
-        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "IncreaseDecreaseInDeposit", "Increase Decrease in Deposit",True)  # financials
-        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "NetIssuancePaymentsOfDebt", "Net Issuance Payments of Debt",True)
-        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "NetLongTermDebtIssuance", "Net Long Term Debt Issuance",True)  # tab
-        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "LongTermDebtIssuance", "Long Term Debt Issuance",True)
-        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "LongTermDebtPayments", "Long Term Debt Payments",True)  # untab
-        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "NetShortTermDebtIssuance", "Net Short Term Debt Issuance",True)  # tab
-        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "ShortTermDebtIssuance", "Short Term Debt Issuance",True)
-        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "ShortTermDebtPayments", "Short Term Debt Payments",True)
-        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "NetCommonStockIssuance", "Net Common Stock Issuance",True)
-        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "CommonStockIssuance", "Common Stock Issuance",True)
-        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "CommonStockPayments", "Common Stock Payments",True)
-        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "NetPreferredStockIssuance", "Net Preferred Stock Issuance",True)
-        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "CashDividendsPaid", "Cash Dividends Paid",True)
-        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "ProceedsFromStockOptionExercised", "Proceeds from Stock Option Exercised",True)
-        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "InterestPaidCFF", "Interest Paid CFF",True)
-        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "NetOtherFinancingCharges", "Net Other Financing Charges",True)
-        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "CashFromDiscontinuedFinancingActivities", "Cash from Discontinued Financing Activities",True)
-        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "CashFlowFromDiscontinuedOperation", "Cash Flow from Discontinued Operation",True)
-        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "OtherCashAdjustmentInsideChangeInCash", "Other Cash Adjustment Inside Change In Cash",True)
+        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "IncreaseDecreaseInDeposit", "\xa0\xa0\xa0 Increase Decrease in Deposit",True)  # financials
+        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "NetIssuancePaymentsOfDebt", "\xa0\xa0\xa0 Net Issuance Payments of Debt",True)
+        #, **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "NetLongTermDebtIssuance", "\xa0\xa0\xa0 Net Long Term Debt Issuance",True)  # tab
+        # , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "LongTermDebtIssuance", "Long Term Debt Issuance",True)
+        # , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "LongTermDebtPayments", "Long Term Debt Payments",True)  # untab
+        #, **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "NetShortTermDebtIssuance", "Net Short Term Debt Issuance",True)  # tab
+        #, **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "ShortTermDebtIssuance", "Short Term Debt Issuance",True)
+       # , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "ShortTermDebtPayments", "Short Term Debt Payments",True)
+        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "NetCommonStockIssuance", "\xa0\xa0\xa0 Net Common Stock Issuance",True)
+        # , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "CommonStockIssuance", "Common Stock Issuance",True)
+        # , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "CommonStockPayments", "Common Stock Payments",True)
+        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "NetPreferredStockIssuance", "\xa0\xa0\xa0 Net Preferred Stock Issuance",True)
+        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "CashDividendsPaid", "\xa0\xa0\xa0 Cash Dividends Paid",True)
+        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "ProceedsFromStockOptionExercised", "\xa0\xa0\xa0 Proceeds from Stock Option Exercised",True)
+        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "InterestPaidCFF", "\xa0\xa0\xa0 Interest Paid CFF",True)
+        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "NetOtherFinancingCharges", "\xa0\xa0\xa0 Net Other Financing Charges",True)
+        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "CashFromDiscontinuedFinancingActivities", "\xa0\xa0\xa0 Cash from Discontinued Financing Activities",True)
+        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "CashFlowFromDiscontinuedOperation", "\xa0\xa0\xa0 Cash Flow from Discontinued Operation",True)
+        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "OtherCashAdjustmentInsideChangeInCash", "\xa0\xa0\xa0 Other Cash Adjustment Inside Change In Cash",True)
         , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "BeginningCashPosition", "Beginning Cash Position",True)
         , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "ChangesInCash", "Net Change in Cash",True)
         , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "EndCashPosition", "End Cash Position",True)

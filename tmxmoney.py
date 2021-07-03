@@ -466,6 +466,7 @@ def scarpTmxAnnual(ticker):
         , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "InterestReceivedCFO", "\xa0\xa0\xa0 Interest Received CFO",True)
         , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "TaxesRefundPaid", "\xa0\xa0\xa0 Taxes Refund Paid",True)  # untab
         , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "CashFromDiscontinuedOperatingActivities", "\xa0\xa0\xa0 Cash from Discontinued Operating Activities",True)
+
         , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "InvestingCashFlow", "Investing Cash Flow",True)
         #, **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "CashFlowFromContinuingInvestingActivities", "Cash from Continuing Investing Activities",True)
         , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "CapitalExpenditureReported", "\xa0\xa0\xa0 Capital Expenditure Reported",True)
@@ -475,6 +476,7 @@ def scarpTmxAnnual(ticker):
         , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "NetPPEPurchaseAndSale", "\xa0\xa0\xa0 Net PPE Purchase and Sale",True)
         # , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "PurchaseOfPPE", "Purchase Of PPE",True)
         # , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "SaleOfPPE", "Sale of PPE",True)
+        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "NetIntangiblesPurchaseAndSale", "\xa0\xa0\xa0 Net Intangibles Purchase and Sale",True)
         , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "NetBusinessPurchaseAndSale", "\xa0\xa0\xa0 Net Business Purchase and Sale",True)
         , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "NetInvestmentPropertiesPurchaseAndSale", "Net Investment Properties Purchase and Sale",True)
         , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "NetInvestmentPurchaseAndSale", "\xa0\xa0\xa0 Net Investment Purchase and Sale",True)

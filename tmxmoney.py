@@ -355,9 +355,10 @@ def scarpTmxAnnual(ticker):
         currentYearBs = year["BalanceSheet"]
         AnnualResponse[count]["BalanceSheet"] = {}
         AnnualResponse[count]["BalanceSheet"] = {
+        ** {"Assets": ""}
         **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "TotalAssets", "Total Assets",True)
-        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "CurrentAssets", "Current Assets",True)
-        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "CashAndCashEquivalents", "Cash and Cash Equivalents",True)
+        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "CurrentAssets", "\xa0\xa0\xa0 Current Assets",True)
+        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "CashAndCashEquivalents", "\xa0\xa0\xa0\xa0\xa0\xa0 Cash and Cash Equivalents",True)
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "ShortTermInvestments", "Short Term Investments",True)
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "RestrictedCashAndInvestments", "Restricted Cash and Investments",True)  # financials
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "MoneyMarketInvestments", "Money Market Investments",True)  # financials

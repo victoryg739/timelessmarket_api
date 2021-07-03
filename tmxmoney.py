@@ -390,6 +390,7 @@ def scarpTmxAnnual(ticker):
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "OtherAssets", "Other Assets",True)  # financials
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "TotalAssets", "Total Assets",True)
 
+        ** {"Liabilities": ""}
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "TotalDeposits", "Total Deposits",True)  # financials
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "FederalFundsPurchasedAndSecuritiesSoldUnderAgreementToRepurchase",
                          "Federal Funds Purchased and Securities Sold Under Agreement to Repurchase",True)  # financials
@@ -419,8 +420,6 @@ def scarpTmxAnnual(ticker):
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "LiabilitiesOfDiscontinuedOperations", "Liabilities of Discontinued Operations",True)  # financials
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "OtherLiabilities", "Other Liabilities",True)  # financials
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "TotalLiabilities", "Total Liabilities",True)
-
-
 
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "TotalEquityGrossMinority", "Total Equity",True)
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "StockholdersEquity", "Stockholders Equity",True)
@@ -506,7 +505,7 @@ def scarpTmxAnnual(ticker):
         , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "InterestPaidCFF", "\xa0\xa0\xa0 Interest Paid CFF",True)
         , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "NetOtherFinancingCharges", "\xa0\xa0\xa0 Net Other Financing Charges",True)
         , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "CashFromDiscontinuedFinancingActivities", "\xa0\xa0\xa0 Cash from Discontinued Financing Activities",True)
-        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "CashFlowFromDiscontinuedOperation", "\xa0\xa0\xa0 Cash Flow from Discontinued Operation",True)
+        #, **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "CashFlowFromDiscontinuedOperation", "\xa0\xa0\xa0 Cash Flow from Discontinued Operation",True)
         , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "OtherCashAdjustmentInsideChangeInCash", "\xa0\xa0\xa0 Other Cash Adjustment Inside Change In Cash",True)
         , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "BeginningCashPosition", "Beginning Cash Position",True)
         , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "ChangesInCash", "Net Change in Cash",True)

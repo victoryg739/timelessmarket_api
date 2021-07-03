@@ -105,158 +105,165 @@ def scarpTmxQuarter(ticker):
         currentQuarterBs = quarter["BalanceSheet"]
         QuarterlyResponse[count]["BalanceSheet"] = {}
         QuarterlyResponse[count]["BalanceSheet"] = {
-        **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "TotalAssets", "Total Assets",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "CurrentAssets", "Current Assets",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "CashAndCashEquivalents", "Cash and Cash Equivalents",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "ShortTermInvestments", "Short Term Investments",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "RestrictedCashAndInvestments", "Restricted Cash and Investments",True)  # financials
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "MoneyMarketInvestments", "Money Market Investments",True)  # financials
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "SecuritiesAndInvestments", "Securities and Investments",True)  # financials
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "NetLoan", "Net Loan",True)  # financials
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "Receivables", "Receivables",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "Inventory", "Inventory",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "PrepaidAssets", "Prepaid Assets",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "RestrictedCash", "Restricted Cash",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "AssetHeldForSaleCurrent", "Asset Held for Sale Current",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "HedgingAssetsCurrent", "Hedging Assets Current",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "OtherCurrentAssets", "Other Current Assets",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "TotalNonCurrentAssets", "Total Non Current Assets",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "NetPPE", "Net PPE",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "GrossPPE", "Gross PPE",True)  # tab
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "AccumulatedDepreciation", "Accumulated Depreciation",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "Goodwill", "Goodwill",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "OtherIntangibleAssets", "Intangible Assets",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "InvestmentAndAdvances", "Investment And Advances",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "FinancialAssets", "Financial Assets",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "NonCurrentAccountsReceivable", "Non Current Accounts Receivable",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "NonCurrentNoteReceivables", "Non Current Note Receivable",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "DueFromRelatedPartiesNonCurrent", "Due From Related Parties Non Current",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "NonCurrentDeferredAssets", "Non Current Deferred Assets",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "NonCurrentPrepaidAssets", "Non Current Deferred Assets",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "DeferredAssets", "Deferred Assets",True)  # financials
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "DefinedPensionBenefit", "Defined Pension Benefit",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "OtherNonCurrentAssets", "Other Non Current Assets",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "AssetsHeldForSale", "AssetsHeldForSale",True)  # financials
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "OtherAssets", "Other Assets",True)  # financials
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "TotalLiabilities", "Total Liabilities",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "TotalDeposits", "Total Deposits",True)  # financials
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "FederalFundsPurchasedAndSecuritiesSoldUnderAgreementToRepurchase",
-                         "Federal Funds Purchased and Securities Sold Under Agreement to Repurchase",True)  # financials
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "SecuritiesLoaned", "SecuritiesLoaned",True)  # financials
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "TradingLiabilities", "Trading Liabilities",True)  # financials
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "SecuritiesLoaned", "SecuritiesLoaned",True)  # financials
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "CurrentLiabilities", "Current Liabilities",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "PayablesAndAccruedExpenses", "Payables and Accrued Expenses",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "CurrentProvisions", "Current Provisions",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "PensionandOtherPostRetirementBenefitPlansCurrent", "Pension and Other Post Retirement Benefit Plans Current",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "CurrentDebtAndCapitalLeaseObligation", "Current Debt and Capital Lease Obligation",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "CurrentDeferredLiabilities", "Current Deferred Liabilities",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "OtherCurrentLiabilities", "Other Current Liabilities",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "TotalNonCurrentLiabilities", "Total Non Current Liabilities",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "LongTermProvisions", "Long Term Provisions",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "LongTermDebtAndCapitalLeaseObligation", "Long Term Debt and Capital Lease Obligation",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "NonCurrentDeferredLiabilities", "Non Current Deferred Liabilities",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "TradeandOtherPayablesNonCurrent", "Trade and Other Payables Non Current",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "DuetoRelatedPartiesNonCurrent", "Dueto Related Parties Non Current",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "NonCurrentAccruedExpenses", "Non Current Accrued Expenses",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "EmployeeBenefits", "Employee Benefits",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "DerivativeProductLiabilities", "Derivative Product Liabilities",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "PreferredSecuritiesOutsideStockEquity", "Preferred Securities Outside Stock Equity",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "RestrictedCommonStock", "Restricted Common Stock",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "LiabilitiesHeldforSaleNonCurrent", "Liabilities Held for Sale Non Current",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "OtherNonCurrentLiabilities", "Other Non Current Liabilities",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "LiabilitiesOfDiscontinuedOperations", "Liabilities of Discontinued Operations",True)  # financials
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "OtherLiabilities", "Other Liabilities",True)  # financials
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "TotalEquityGrossMinority", "Total Equity",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "StockholdersEquity", "Stockholders Equity",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "CapitalStock", "Capital Stock",True)  # tab
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "AdditionalPaidInCapital", "Additional Paid in Capital",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "RetainedEarnings", "Retained Earnings",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "TreasuryStock", "Treasury Stock",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "GainsLossesNotAffectingRetainedEarnings", "Reserves/Accumulated Comprehensive Income/Losse",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "OtherEquityInterest", "Other Equity Interest",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "MinorityInterest", "Minority Interest",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "TotalCapitalization", "Total Capitalization",True)
-        , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "CapitalLeaseObligations", "Capital Lease Obligations",True)}
+            **{"Assets": ""}
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "CurrentAssets", "Current Assets", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "CashAndCashEquivalents", "\xa0\xa0\xa0 Cash and Cash Equivalents", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "ShortTermInvestments", "\xa0\xa0\xa0 Short Term Investments", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "RestrictedCashAndInvestments", "Restricted Cash and Investments", True)  # financials
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "MoneyMarketInvestments", "Money Market Investments", True)  # financials
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "SecuritiesAndInvestments", "Securities and Investments", True)  # financials
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "NetLoan", "Net Loan", True)  # financials
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "Receivables", "\xa0\xa0\xa0 Receivables", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "Inventory", "\xa0\xa0\xa0 Inventory", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "PrepaidAssets", "\xa0\xa0\xa0 Prepaid Assets", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "RestrictedCash", "\xa0\xa0\xa0 Restricted Cash", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "AssetHeldForSaleCurrent", "\xa0\xa0\xa0 Asset Held for Sale Current", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "HedgingAssetsCurrent", "\xa0\xa0\xa0 Hedging Assets Current", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "OtherCurrentAssets", "\xa0\xa0\xa0 Other Current Assets", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "TotalNonCurrentAssets", "Total Non Current Assets", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "NetPPE", "\xa0\xa0\xa0 Net PPE", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "GrossPPE", "\xa0\xa0\xa0\xa0\xa0\xa0  Gross PPE", True)  # tab
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "AccumulatedDepreciation", "\xa0\xa0\xa0\xa0\xa0\xa0  Accumulated Depreciation", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "Goodwill", "\xa0\xa0\xa0 Goodwill", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "OtherIntangibleAssets", "\xa0\xa0\xa0 Intangible Assets", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "InvestmentsAndAdvances", "\xa0\xa0\xa0 Investments And Advances", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "FinancialAssets", "\xa0\xa0\xa0 Financial Assets", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "NonCurrentAccountsReceivable", "\xa0\xa0\xa0 Non Current Accounts Receivable", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "NonCurrentNoteReceivables", "\xa0\xa0\xa0 Non Current Note Receivable", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "DueFromRelatedPartiesNonCurrent", "\xa0\xa0\xa0 Due From Related Parties Non Current", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "NonCurrentDeferredAssets", "\xa0\xa0\xa0 Non Current Deferred Assets", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "NonCurrentPrepaidAssets", "\xa0\xa0\xa0 Non Current Deferred Assets", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "DeferredAssets", "Deferred Assets", True)  # financials
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "DefinedPensionBenefit", "\xa0\xa0\xa0 Defined Pension Benefit", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "OtherNonCurrentAssets", "\xa0\xa0\xa0 Other Non Current Assets", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "AssetsHeldForSale", "AssetsHeldForSale", True)  # financials
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "OtherAssets", "Other Assets", True)  # financials
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "TotalAssets", "Total Assets", True)
+
+            , **{"Liabilities": ""}
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "TotalDeposits", "Total Deposits", True)  # financials
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "FederalFundsPurchasedAndSecuritiesSoldUnderAgreementToRepurchase",
+                             "Federal Funds Purchased and Securities Sold Under Agreement to Repurchase", True)  # financials
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "SecuritiesLoaned", "SecuritiesLoaned", True)  # financials
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "TradingLiabilities", "Trading Liabilities", True)  # financials
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "SecuritiesLoaned", "SecuritiesLoaned", True)  # financials
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "CurrentLiabilities", "Current Liabilities", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "PayablesAndAccruedExpenses", "\xa0\xa0\xa0 Payables and Accrued Expenses", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "CurrentProvisions", "\xa0\xa0\xa0 Current Provisions", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "PensionandOtherPostRetirementBenefitPlansCurrent", "\xa0\xa0\xa0 Pension and Other Post Retirement Benefit Plans Current",
+                             True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "CurrentDebtAndCapitalLeaseObligation", "\xa0\xa0\xa0 Current Debt and Capital Lease Obligation", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "CurrentDeferredLiabilities", "\xa0\xa0\xa0 Current Deferred Liabilities", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "OtherCurrentLiabilities", "\xa0\xa0\xa0 Other Current Liabilities", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "TotalNonCurrentLiabilities", "Total Non Current Liabilities", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "LongTermProvisions", "\xa0\xa0\xa0 Long Term Provisions", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "LongTermDebtAndCapitalLeaseObligation", "\xa0\xa0\xa0 Long Term Debt and Capital Lease Obligation", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "NonCurrentDeferredLiabilities", "\xa0\xa0\xa0 Non Current Deferred Liabilities", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "TradeandOtherPayablesNonCurrent", "\xa0\xa0\xa0 Trade and Other Payables Non Current", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "DuetoRelatedPartiesNonCurrent", "\xa0\xa0\xa0 Dueto Related Parties Non Current", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "NonCurrentAccruedExpenses", "\xa0\xa0\xa0 Non Current Accrued Expenses", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "EmployeeBenefits", "\xa0\xa0\xa0 Employee Benefits", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "DerivativeProductLiabilities", "\xa0\xa0\xa0 Derivative Product Liabilities", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "PreferredSecuritiesOutsideStockEquity", "\xa0\xa0\xa0 Preferred Securities Outside Stock Equity", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "RestrictedCommonStock", "\xa0\xa0\xa0 Restricted Common Stock", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "LiabilitiesHeldforSaleNonCurrent", "\xa0\xa0\xa0 Liabilities Held for Sale Non Current", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "OtherNonCurrentLiabilities", "\xa0\xa0\xa0 Other Non Current Liabilities", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "LiabilitiesOfDiscontinuedOperations", "Liabilities of Discontinued Operations", True)  # financials
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "OtherLiabilities", "Other Liabilities", True)  # financials
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "TotalLiabilities", "Total Liabilities", True)
+
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "TotalEquityGrossMinority", "Total Equity", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "StockholdersEquity", "Stockholders Equity", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "CapitalStock", "Capital Stock", True)  # tab
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "AdditionalPaidInCapital", "Additional Paid in Capital", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "RetainedEarnings", "Retained Earnings", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "TreasuryStock", "Treasury Stock", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "GainsLossesNotAffectingRetainedEarnings", "Reserves/Accumulated Comprehensive Income/Losses", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "OtherEquityInterest", "Other Equity Interest", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "MinorityInterest", "Minority Interest", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "TotalCapitalization", "Total Capitalization", True)
+            , **checkJsonKey(QuarterlyResponse, "BalanceSheet", currentQuarterBs, "CapitalLeaseObligations", "Capital Lease Obligations", True)}
 
         currentQuarterCf = quarter["CashFlow"]
         QuarterlyResponse[count]["CashFlow"] = {}
         QuarterlyResponse[count]["CashFlow"] = {
-        **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "OperatingCashFlow", "Operating Cash Flow",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "CashFlowFromContinuingOperatingActivities", "Cash from Continuing Operating Activities",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "NetIncomeFromContinuingOperations", "Net Income",True)  # tab
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "OperatingGainsLosses", "Operating Gains Losses",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "DepreciationAmortizationDepletion", "Depreciation Amortization Depletion",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "DeferredTax", "Deferred Tax",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "AmortizationOfFinancingCostsAndDiscounts", "Amortization of Financing Costs and Discounts",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "AmortizationOfSecurities", "Amortization of Securities",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "AssetImpairmentCharge", "Asset Impairment Charge",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "ProvisionandWriteOffofAssets", "Provision and Write Off of Assets",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "UnrealizedGainLossOnInvestmentSecuritites", "Unrealized GainLossOnInvestmentSecuritites",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "StockBasedCompensation", "Stock Based Compensation",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "ExcessTaxBenefitFromStockBasedCompensation", "Excess Tax Benefit from Stock Based Compensation",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "ProvisionForLoanLeaseAndOtherLosses", "Provision for Loan Lease and Other Losses",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "OtherNonCashItems", "Other Non Cash Items",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "ChangeInWorkingCapital", "Changes in Operating Assets and Liabilities",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "ChangeInReceivables", "Receivables",True)  # tab
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "ChangeInInventory", "Inventory",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "ChangeInPrepaidAssets", "Prepaid Assets",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "ChangeInPayablesAndAccruedExpense", "Payables and Accrued Expense",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "ChangeInOtherCurrentAssets", "Other Current Assets",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "ChangeInOtherCurrentLiabilities", "Other Current Liabilities",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "ChangeInOtherWorkingCapital", "Other Working Capital",True)  # untab
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "DividendPaidCFO", "DividendPaidCFO",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "DividendReceivedCFO", "Dividend Received CFO",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "InterestPaidCFO", "Interest Paid CFO",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "InterestReceivedCFO", "Interest Received CFO",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "TaxesRefundPaid", "Taxes Refund Paid",True)  # untab
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "CashFromDiscontinuedOperatingActivities", "Cash from Discontinued Operating Activities",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "InvestingCashFlow", "Investing Cash Flow",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "CashFlowFromContinuingInvestingActivities", "Cash from Continuing Investing Activities",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "CapitalExpenditureReported", "Capital Expenditure Reported",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "ProceedsPaymentFederalFundsSoldAndSecuritiesPurchasedUnderAgreementToResell",
-                         "Federal Funds Sold and Securities Purchased Under Agreement to Resell",True)  # financials
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "ProceedsPaymentInInterestBearingDepositsInBank", "Interest Bearing Deposits in Bank",True)  # financials
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "NetPPEPurchaseAndSale", "Net PPE Purchase and Sale",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "PurchaseOfPPE", "Purchase Of PPE",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "SaleOfPPE", "Sale of PPE",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "NetBusinessPurchaseAndSale", "Net Business Purchase and Sale",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "NetInvestmentPropertiesPurchaseAndSale", "Net Investment Properties Purchase and Sale",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "NetInvestmentPurchaseAndSale", "Net Investment Purchase and Sale",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "NetProceedsPaymentForLoan", "Net Proceeds Payment for Loan",True)  # financials
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "DividendsReceivedCFI", "Dividends Received CFI",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "InterestsReceivedCFI", "Interests Received CFI",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "NetOtherInvestingChanges", "Net Other Investing Changes",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "CashFromDiscontinuedInvestingActivities", "Cash from Discontinued Investing Activities",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "FinancingCashFlow", "Financing Cash Flow",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "CashFlowFromContinuingFinancingActivities", "Cash from Continuing Financing Activities",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "ChangeInFederalFundsAndSecuritiesSoldForRepurchase", "Federal Funds and Securities Sold",True)  # financials
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "IncreaseDecreaseInDeposit", "Increase Decrease in Deposit",True)  # financials
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "NetIssuancePaymentsOfDebt", "Net Issuance Payments of Debt",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "NetLongTermDebtIssuance", "Net Long Term Debt Issuance",True)  # tab
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "LongTermDebtIssuance", "Long Term Debt Issuance",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "LongTermDebtPayments", "Long Term Debt Payments",True)  # untab
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "NetShortTermDebtIssuance", "Net Short Term Debt Issuance",True)  # tab
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "ShortTermDebtIssuance", "Short Term Debt Issuance",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "ShortTermDebtPayments", "Short Term Debt Payments",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "NetCommonStockIssuance", "Net Common Stock Issuance",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "CommonStockIssuance", "Common Stock Issuance",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "CommonStockPayments", "Common Stock Payments",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "NetPreferredStockIssuance", "Net Preferred Stock Issuance",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "CashDividendsPaid", "Cash Dividends Paid",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "ProceedsFromStockOptionExercised", "Proceeds from Stock Option Exercised",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "InterestPaidCFF", "Interest Paid CFF",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "NetOtherFinancingCharges", "Net Other Financing Charges",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "CashFromDiscontinuedFinancingActivities", "Cash from Discontinued Financing Activities",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "CashFlowFromDiscontinuedOperation", "Cash Flow from Discontinued Operation",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "OtherCashAdjustmentInsideChangeInCash", "Other Cash Adjustment Inside Change In Cash",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "BeginningCashPosition", "Beginning Cash Position",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "ChangesInCash", "Net Change in Cash",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "EndCashPosition", "End Cash Position",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "IncomeTaxPaidSupplementalData", "Income Tax Paid, Supplemental",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "InterestPaidSupplementalData", "Interest Paid, Supplemental",True)
-        , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "CapitalExpenditure", "Capital Expenditure",True)}
+            **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "OperatingCashFlow", "Operating Cash Flow", True)
+            # ,**checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "CashFlowFromContinuingOperatingActivities", "Cash from Continuing Operating Activities",True)
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "NetIncomeFromContinuingOperations", "\xa0\xa0\xa0 Net Income", True)  # tab
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "OperatingGainsLosses", "\xa0\xa0\xa0 Operating Gains Losses", True)
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "DepreciationAmortizationDepletion", "\xa0\xa0\xa0 Depreciation Amortization Depletion", True)
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "DeferredTax", "\xa0\xa0\xa0 Deferred Tax", True)
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "AmortizationOfFinancingCostsAndDiscounts", "\xa0\xa0\xa0 Amortization of Financing Costs and Discounts", True)
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "AmortizationOfSecurities", "\xa0\xa0\xa0 Amortization of Securities", True)
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "AssetImpairmentCharge", "\xa0\xa0\xa0 Asset Impairment Charge", True)
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "ProvisionandWriteOffofAssets", "\xa0\xa0\xa0 Provision and Write Off of Assets", True)
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "UnrealizedGainLossOnInvestmentSecuritites", "\xa0\xa0\xa0 Unrealized GainLossOnInvestmentSecuritites", True)
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "StockBasedCompensation", "\xa0\xa0\xa0 Stock Based Compensation", True)
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "ExcessTaxBenefitFromStockBasedCompensation", "\xa0\xa0\xa0 Excess Tax Benefit from Stock Based Compensation", True)
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "ProvisionForLoanLeaseAndOtherLosses", "\xa0\xa0\xa0 Provision for Loan Lease and Other Losses", True)
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "OtherNonCashItems", "\xa0\xa0\xa0 Other Non Cash Items", True)
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "ChangeInWorkingCapital", "\xa0\xa0\xa0 Changes in Operating Assets and Liabilities", True)
+            # , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "ChangeInReceivables", "Receivables",True)  # tab
+            # , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "ChangeInInventory", "Inventory",True)
+            # , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "ChangeInPrepaidAssets", "Prepaid Assets",True)
+            # , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "ChangeInPayablesAndAccruedExpense", "Payables and Accrued Expense",True)
+            # , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "ChangeInOtherCurrentAssets", "Other Current Assets",True)
+            # , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "ChangeInOtherCurrentLiabilities", "Other Current Liabilities",True)
+            # , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "ChangeInOtherWorkingCapital", "Other Working Capital",True)  # untab
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "DividendPaidCFO", "\xa0\xa0\xa0 DividendPaidCFO", True)
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "DividendReceivedCFO", "\xa0\xa0\xa0 Dividend Received CFO", True)
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "InterestPaidCFO", "\xa0\xa0\xa0 Interest Paid CFO", True)
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "InterestReceivedCFO", "\xa0\xa0\xa0 Interest Received CFO", True)
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "TaxesRefundPaid", "\xa0\xa0\xa0 Taxes Refund Paid", True)  # untab
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "CashFromDiscontinuedOperatingActivities", "\xa0\xa0\xa0 Cash from Discontinued Operating Activities", True)
 
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "InvestingCashFlow", "Investing Cash Flow", True)
+            # , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "CashFlowFromContinuingInvestingActivities", "Cash from Continuing Investing Activities",True)
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "CapitalExpenditureReported", "\xa0\xa0\xa0 Capital Expenditure Reported", True)
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "ProceedsPaymentFederalFundsSoldAndSecuritiesPurchasedUnderAgreementToResell",
+                             "Federal Funds Sold and Securities Purchased Under Agreement to Resell", True)  # financials
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "ProceedsPaymentInInterestBearingDepositsInBank", "Interest Bearing Deposits in Bank", True)  # financials
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "NetPPEPurchaseAndSale", "\xa0\xa0\xa0 Net PPE Purchase and Sale", True)
+            # , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "PurchaseOfPPE", "Purchase Of PPE",True)
+            # , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "SaleOfPPE", "Sale of PPE",True)
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "NetIntangiblesPurchaseAndSale", "\xa0\xa0\xa0 Net Intangibles Purchase and Sale", True)
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "NetBusinessPurchaseAndSale", "\xa0\xa0\xa0 Net Business Purchase and Sale", True)
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "NetInvestmentPropertiesPurchaseAndSale", "Net Investment Properties Purchase and Sale", True)
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "NetInvestmentPurchaseAndSale", "\xa0\xa0\xa0 Net Investment Purchase and Sale", True)
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "NetProceedsPaymentForLoan", "Net Proceeds Payment for Loan", True)  # financials
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "DividendsReceivedCFI", "\xa0\xa0\xa0 Dividends Received CFI", True)
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "InterestsReceivedCFI", "\xa0\xa0\xa0 Interests Received CFI", True)
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "NetOtherInvestingChanges", "\xa0\xa0\xa0 Net Other Investing Changes", True)
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "CashFromDiscontinuedInvestingActivities", "\xa0\xa0\xa0 Cash from Discontinued Investing Activities", True)
+
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "FinancingCashFlow", "Financing Cash Flow", True)
+            # , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "CashFlowFromContinuingFinancingActivities", "Cash from Continuing Financing Activities",True)
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "ChangeInFederalFundsAndSecuritiesSoldForRepurchase", "Federal Funds and Securities Sold", True)  # financials
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "IncreaseDecreaseInDeposit", "\xa0\xa0\xa0 Increase Decrease in Deposit", True)  # financials
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "NetIssuancePaymentsOfDebt", "\xa0\xa0\xa0 Net Issuance Payments of Debt", True)
+            # , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "NetLongTermDebtIssuance", "\xa0\xa0\xa0 Net Long Term Debt Issuance",True)  # tab
+            # , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "LongTermDebtIssuance", "Long Term Debt Issuance",True)
+            # , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "LongTermDebtPayments", "Long Term Debt Payments",True)  # untab
+            # , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "NetShortTermDebtIssuance", "Net Short Term Debt Issuance",True)  # tab
+            # , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "ShortTermDebtIssuance", "Short Term Debt Issuance",True)
+            # , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "ShortTermDebtPayments", "Short Term Debt Payments",True)
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "NetCommonStockIssuance", "\xa0\xa0\xa0 Net Common Stock Issuance", True)
+            # , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "CommonStockIssuance", "Common Stock Issuance",True)
+            # , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "CommonStockPayments", "Common Stock Payments",True)
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "NetPreferredStockIssuance", "\xa0\xa0\xa0 Net Preferred Stock Issuance", True)
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "CashDividendsPaid", "\xa0\xa0\xa0 Cash Dividends Paid", True)
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "ProceedsFromStockOptionExercised", "\xa0\xa0\xa0 Proceeds from Stock Option Exercised", True)
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "InterestPaidCFF", "\xa0\xa0\xa0 Interest Paid CFF", True)
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "NetOtherFinancingCharges", "\xa0\xa0\xa0 Net Other Financing Charges", True)
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "CashFromDiscontinuedFinancingActivities", "\xa0\xa0\xa0 Cash from Discontinued Financing Activities", True)
+            # , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "CashFlowFromDiscontinuedOperation", "\xa0\xa0\xa0 Cash Flow from Discontinued Operation",True)
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "OtherCashAdjustmentInsideChangeInCash", "\xa0\xa0\xa0 Other Cash Adjustment Inside Change In Cash", True)
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "BeginningCashPosition", "Beginning Cash Position", True)
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "ChangesInCash", "Net Change in Cash", True)
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "EndCashPosition", "End Cash Position", True)
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "IncomeTaxPaidSupplementalData", "Income Tax Paid, Supplemental", True)
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "InterestPaidSupplementalData", "Interest Paid, Supplemental", True)
+            , **checkJsonKey(QuarterlyResponse, "CashFlow", currentQuarterCf, "CapitalExpenditure", "Capital Expenditure", True)}
 
 
 

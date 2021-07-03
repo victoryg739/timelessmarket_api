@@ -356,21 +356,20 @@ def scarpTmxAnnual(ticker):
         AnnualResponse[count]["BalanceSheet"] = {}
         AnnualResponse[count]["BalanceSheet"] = {
         ** {"Assets": ""}
-        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "TotalAssets", "Total Assets",True)
-        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "CurrentAssets", "\xa0\xa0\xa0 Current Assets",True)
-        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "CashAndCashEquivalents", "\xa0\xa0\xa0\xa0\xa0\xa0 Cash and Cash Equivalents",True)
-        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "ShortTermInvestments", "Short Term Investments",True)
+        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "CurrentAssets", "Current Assets",True)
+        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "CashAndCashEquivalents", "\xa0\xa0\xa0 Cash and Cash Equivalents",True)
+        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "ShortTermInvestments", "\xa0\xa0\xa0 Short Term Investments",True)
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "RestrictedCashAndInvestments", "Restricted Cash and Investments",True)  # financials
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "MoneyMarketInvestments", "Money Market Investments",True)  # financials
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "SecuritiesAndInvestments", "Securities and Investments",True)  # financials
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "NetLoan", "Net Loan",True)  # financials
-        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "Receivables", "Receivables",True)
-        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "Inventory", "Inventory",True)
-        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "PrepaidAssets", "Prepaid Assets",True)
-        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "RestrictedCash", "Restricted Cash",True)
-        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "AssetHeldForSaleCurrent", "Asset Held for Sale Current",True)
-        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "HedgingAssetsCurrent", "Hedging Assets Current",True)
-        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "OtherCurrentAssets", "Other Current Assets",True)
+        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "Receivables", "\xa0\xa0\xa0 Receivables",True)
+        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "Inventory", "\xa0\xa0\xa0 Inventory",True)
+        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "PrepaidAssets", "\xa0\xa0\xa0 Prepaid Assets",True)
+        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "RestrictedCash", "\xa0\xa0\xa0 Restricted Cash",True)
+        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "AssetHeldForSaleCurrent", "\xa0\xa0\xa0 Asset Held for Sale Current",True)
+        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "HedgingAssetsCurrent", "\xa0\xa0\xa0 Hedging Assets Current",True)
+        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "OtherCurrentAssets", "\xa0\xa0\xa0 Other Current Assets",True)
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "TotalNonCurrentAssets", "Total Non Current Assets",True)
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "NetPPE", "Net PPE",True)
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "GrossPPE", "Gross PPE",True)  # tab
@@ -389,6 +388,8 @@ def scarpTmxAnnual(ticker):
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "OtherNonCurrentAssets", "Other Non Current Assets",True)
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "AssetsHeldForSale", "AssetsHeldForSale",True)  # financials
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "OtherAssets", "Other Assets",True)  # financials
+        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "TotalAssets", "Total Assets",True)
+
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "TotalLiabilities", "Total Liabilities",True)
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "TotalDeposits", "Total Deposits",True)  # financials
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "FederalFundsPurchasedAndSecuritiesSoldUnderAgreementToRepurchase",

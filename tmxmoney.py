@@ -437,8 +437,8 @@ def scarpTmxAnnual(ticker):
         currentYearCf = year["CashFlow"]
         AnnualResponse[count]["CashFlow"] = {}
         AnnualResponse[count]["CashFlow"] = {
-        #**checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "OperatingCashFlow", "Operating Cash Flow",True)
-        **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "CashFlowFromContinuingOperatingActivities", "Cash from Continuing Operating Activities",True)
+        **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "OperatingCashFlow", "Operating Cash Flow",True)
+        #,**checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "CashFlowFromContinuingOperatingActivities", "Cash from Continuing Operating Activities",True)
         , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "NetIncomeFromContinuingOperations", "\xa0\xa0\xa0 Net Income",True)  # tab
         , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "OperatingGainsLosses", "Operating Gains Losses",True)
         , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "DepreciationAmortizationDepletion", "Depreciation Amortization Depletion",True)

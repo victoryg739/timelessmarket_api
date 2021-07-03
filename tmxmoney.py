@@ -390,7 +390,6 @@ def scarpTmxAnnual(ticker):
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "OtherAssets", "Other Assets",True)  # financials
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "TotalAssets", "Total Assets",True)
 
-        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "TotalLiabilities", "Total Liabilities",True)
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "TotalDeposits", "Total Deposits",True)  # financials
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "FederalFundsPurchasedAndSecuritiesSoldUnderAgreementToRepurchase",
                          "Federal Funds Purchased and Securities Sold Under Agreement to Repurchase",True)  # financials
@@ -398,27 +397,31 @@ def scarpTmxAnnual(ticker):
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "TradingLiabilities", "Trading Liabilities",True)  # financials
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "SecuritiesLoaned", "SecuritiesLoaned",True)  # financials
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "CurrentLiabilities", "Current Liabilities",True)
-        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "PayablesAndAccruedExpenses", "Payables and Accrued Expenses",True)
-        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "CurrentProvisions", "Current Provisions",True)
-        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "PensionandOtherPostRetirementBenefitPlansCurrent", "Pension and Other Post Retirement Benefit Plans Current",True)
-        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "CurrentDebtAndCapitalLeaseObligation", "Current Debt and Capital Lease Obligation",True)
-        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "CurrentDeferredLiabilities", "Current Deferred Liabilities",True)
-        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "OtherCurrentLiabilities", "Other Current Liabilities",True)
+        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "PayablesAndAccruedExpenses", "\xa0\xa0\xa0 Payables and Accrued Expenses",True)
+        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "CurrentProvisions", "\xa0\xa0\xa0 Current Provisions",True)
+        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "PensionandOtherPostRetirementBenefitPlansCurrent", "\xa0\xa0\xa0 Pension and Other Post Retirement Benefit Plans Current",True)
+        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "CurrentDebtAndCapitalLeaseObligation", "\xa0\xa0\xa0 Current Debt and Capital Lease Obligation",True)
+        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "CurrentDeferredLiabilities", "\xa0\xa0\xa0 Current Deferred Liabilities",True)
+        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "OtherCurrentLiabilities", "\xa0\xa0\xa0 Other Current Liabilities",True)
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "TotalNonCurrentLiabilities", "Total Non Current Liabilities",True)
-        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "LongTermProvisions", "Long Term Provisions",True)
-        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "LongTermDebtAndCapitalLeaseObligation", "Long Term Debt and Capital Lease Obligation",True)
-        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "NonCurrentDeferredLiabilities", "NonCurrentDeferredLiabilities",True)
-        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "TradeandOtherPayablesNonCurrent", "Trade and Other Payables Non Current",True)
-        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "DuetoRelatedPartiesNonCurrent", "Dueto Related Parties Non Current",True)
-        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "NonCurrentAccruedExpenses", "Non Current Accrued Expenses",True)
-        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "EmployeeBenefits", "Employee Benefits",True)
-        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "DerivativeProductLiabilities", "Derivative Product Liabilities",True)
-        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "PreferredSecuritiesOutsideStockEquity", "Preferred Securities Outside Stock Equity",True)
-        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "RestrictedCommonStock", "Restricted Common Stock",True)
-        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "LiabilitiesHeldforSaleNonCurrent", "Liabilities Held for Sale Non Current",True)
-        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "OtherNonCurrentLiabilities", "Other Non Current Liabilities",True)
+        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "LongTermProvisions", "\xa0\xa0\xa0 Long Term Provisions",True)
+        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "LongTermDebtAndCapitalLeaseObligation", "\xa0\xa0\xa0 Long Term Debt and Capital Lease Obligation",True)
+        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "NonCurrentDeferredLiabilities", "\xa0\xa0\xa0 NonCurrentDeferredLiabilities",True)
+        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "TradeandOtherPayablesNonCurrent", "\xa0\xa0\xa0 Trade and Other Payables Non Current",True)
+        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "DuetoRelatedPartiesNonCurrent", "\xa0\xa0\xa0 Dueto Related Parties Non Current",True)
+        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "NonCurrentAccruedExpenses", "\xa0\xa0\xa0 Non Current Accrued Expenses",True)
+        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "EmployeeBenefits", "\xa0\xa0\xa0 Employee Benefits",True)
+        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "DerivativeProductLiabilities", "\xa0\xa0\xa0 Derivative Product Liabilities",True)
+        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "PreferredSecuritiesOutsideStockEquity", "\xa0\xa0\xa0 Preferred Securities Outside Stock Equity",True)
+        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "RestrictedCommonStock", "\xa0\xa0\xa0 Restricted Common Stock",True)
+        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "LiabilitiesHeldforSaleNonCurrent", "\xa0\xa0\xa0 Liabilities Held for Sale Non Current",True)
+        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "OtherNonCurrentLiabilities", "\xa0\xa0\xa0 Other Non Current Liabilities",True)
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "LiabilitiesOfDiscontinuedOperations", "Liabilities of Discontinued Operations",True)  # financials
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "OtherLiabilities", "Other Liabilities",True)  # financials
+        , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "TotalLiabilities", "Total Liabilities",True)
+
+
+
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "TotalEquityGrossMinority", "Total Equity",True)
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "StockholdersEquity", "Stockholders Equity",True)
         , **checkJsonKey(AnnualResponse, "BalanceSheet", currentYearBs, "CapitalStock", "Capital Stock",True)  # tab

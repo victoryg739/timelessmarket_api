@@ -467,22 +467,22 @@ def scarpTmxAnnual(ticker):
         , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "TaxesRefundPaid", "\xa0\xa0\xa0 Taxes Refund Paid",True)  # untab
         , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "CashFromDiscontinuedOperatingActivities", "\xa0\xa0\xa0 Cash from Discontinued Operating Activities",True)
         , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "InvestingCashFlow", "Investing Cash Flow",True)
-        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "CashFlowFromContinuingInvestingActivities", "Cash from Continuing Investing Activities",True)
-        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "CapitalExpenditureReported", "Capital Expenditure Reported",True)
+        #, **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "CashFlowFromContinuingInvestingActivities", "Cash from Continuing Investing Activities",True)
+        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "CapitalExpenditureReported", "\xa0\xa0\xa0 Capital Expenditure Reported",True)
         , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "ProceedsPaymentFederalFundsSoldAndSecuritiesPurchasedUnderAgreementToResell",
                          "Federal Funds Sold and Securities Purchased Under Agreement to Resell",True)  # financials
         , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "ProceedsPaymentInInterestBearingDepositsInBank", "Interest Bearing Deposits in Bank",True)  # financials
-        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "NetPPEPurchaseAndSale", "Net PPE Purchase and Sale",True)
-        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "PurchaseOfPPE", "Purchase Of PPE",True)
-        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "SaleOfPPE", "Sale of PPE",True)
-        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "NetBusinessPurchaseAndSale", "Net Business Purchase and Sale",True)
+        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "NetPPEPurchaseAndSale", "\xa0\xa0\xa0 Net PPE Purchase and Sale",True)
+        # , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "PurchaseOfPPE", "Purchase Of PPE",True)
+        # , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "SaleOfPPE", "Sale of PPE",True)
+        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "NetBusinessPurchaseAndSale", "\xa0\xa0\xa0 Net Business Purchase and Sale",True)
         , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "NetInvestmentPropertiesPurchaseAndSale", "Net Investment Properties Purchase and Sale",True)
-        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "NetInvestmentPurchaseAndSale", "Net Investment Purchase and Sale",True)
+        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "NetInvestmentPurchaseAndSale", "\xa0\xa0\xa0 Net Investment Purchase and Sale",True)
         , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "NetProceedsPaymentForLoan", "Net Proceeds Payment for Loan",True)  # financials
-        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "DividendsReceivedCFI", "Dividends Received CFI",True)
-        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "InterestsReceivedCFI", "Interests Received CFI",True)
-        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "NetOtherInvestingChanges", "Net Other Investing Changes",True)
-        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "CashFromDiscontinuedInvestingActivities", "Cash from Discontinued Investing Activities",True)
+        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "DividendsReceivedCFI", "\xa0\xa0\xa0 Dividends Received CFI",True)
+        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "InterestsReceivedCFI", "\xa0\xa0\xa0 Interests Received CFI",True)
+        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "NetOtherInvestingChanges", "\xa0\xa0\xa0 Net Other Investing Changes",True)
+        , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "CashFromDiscontinuedInvestingActivities", "\xa0\xa0\xa0 Cash from Discontinued Investing Activities",True)
         , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "FinancingCashFlow", "Financing Cash Flow",True)
         , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "CashFlowFromContinuingFinancingActivities", "Cash from Continuing Financing Activities",True)
         , **checkJsonKey(AnnualResponse, "CashFlow", currentYearCf, "ChangeInFederalFundsAndSecuritiesSoldForRepurchase", "Federal Funds and Securities Sold",True)  # financials

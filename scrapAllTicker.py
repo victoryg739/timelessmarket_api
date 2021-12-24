@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup as soup
 import json
 import urllib.request
 import requests
-from yahoo_fin import stock_info
+#from yahoo_fin import stock_info
 import pandas as pd
 import ftplib
 import io
@@ -18,7 +18,6 @@ def scrap_sp500():
     #js = newSp500.to_json(orient = 'records')
     #print(js)
     return newSp500
-#scrap_sp500()
 
 
 def scrap_nasdaq():
@@ -55,6 +54,6 @@ dfSp500 = scrap_sp500()
 result = pd.concat([dfNasdaq, dfSp500], ignore_index=True, sort=True)
 jsonData = result.to_json(orient = 'records')
 jsonData = json.loads(jsonData)
-print(jsonData)
+#print(jsonData)
 with open('data.json', 'w') as outfile:
     json.dump(jsonData, outfile)

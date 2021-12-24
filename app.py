@@ -4,6 +4,8 @@ from yahoofin import scrap_yahoofin
 from flask_cors import CORS
 from get_ticker import ticker
 from tmxmoney import *
+import json
+from flask import jsonify
 app = Flask(__name__)
 CORS(app)
 
@@ -16,7 +18,15 @@ def hello_world():
 #Return all tickers
 @app.route("/ticker")
 def tickers():
-    return ticker()
+    # JSON file 
+    f = open ('data.json', "r") 
+    
+    # Reading from file 
+    data = json.loads(f.read()) 
+
+    return jsonify(data)
+
+    #return ticker()
 
 @app.route("/fundamental/<query>")
 def search_query(query):
